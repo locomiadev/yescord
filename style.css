@@ -1,0 +1,361 @@
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.main-container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+}
+
+.chat-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.servers-container {
+    flex: 1;
+    padding: 10px;
+}
+
+.server-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-list button {
+    padding: 10px;
+    margin: 5px 0;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.server-list button:hover {
+    padding: 10px;
+    margin: 5px 0;
+    background: radial-gradient(circle, rgba(40,167,69,1) 0%, rgba(255,211,27,1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Профиль */
+.profile-container {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-container a {
+    display: block;
+    padding: 10px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.emoji-picker {
+    display: inline-block;
+    position: relative;
+}
+
+.emoji-picker button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.emoji-list {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.emoji-list img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.server-users {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.server-users h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.server-users ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.server-users li {
+    font-size: 13px;
+    padding: 3px 0;
+}
+
+.status-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: gray;
+}
+
+.username {
+    display: inline-block;
+    max-width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.message {
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.container {
+    transition: width 0.3s ease-in-out;
+    min-width: 100px;
+    max-width: 80%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.resize-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.resize-slider {
+    width: 70%;
+}
+
+.hide-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+}
+
+.resizable {
+    position: relative;
+    min-width: 150px;
+    flex-grow: 1; 
+    flex-basis: 300px; 
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.resizer {
+    width: 5px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.hidden-container {
+    display: none !important;
+}
+
+.dark-theme {
+    background: url("darktheme.jpg");
+    color: white !important;
+}
+
+
+.dark-theme .container {
+    background: rgba(50, 50, 50, 0.9);
+    color: white;
+}
+
+.dark-theme .chat-box {
+    border: 1px solid #555;
+}
+
+.dark-theme .chat-input input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-theme .chat-input button {
+    background: #0056b3;
+}
+
+.dark-theme .server-list button {
+    background: #227722;
+}
+
+.dark-theme .profile-container a {
+    background: #992222;
+}
+
+.dark-theme .hide-button {
+    background: darkred;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #servers-list {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background: #202225;
+        z-index: 10;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    #servers-list.open {
+        transform: translateX(0);
+    }
+
+    #chat {
+        width: 100%; 
+        height: 100vh;
+    }
+
+    #profile {
+        display: none; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background: #202225;
+        z-index: 10;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    #profile.open {
+        transform: translateX(0); 
+    }
+
+    .toggle-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    #toggle-servers {
+        left: 10px;
+    }
+
+    #toggle-profile {
+        right: 10px;
+    }
+}
